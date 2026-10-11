@@ -1,48 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Goodwall</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: linear-gradient(135deg, #0f766e 0%, #14532d 100%);
-            font-family: 'Arial', sans-serif;
-        }
-
-        .container {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px 50px;
-            border-radius: 12px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-            max-width: 700px;
-        }
-
-        h1 {
-            color: #0f172a;
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        p {
-            color: #334155;
-            font-size: 1.2em;
-            margin: 14px 0 0 0;
-            line-height: 1.5;
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Africa Centre for Climate Change and Environmental Sustainability promotes climate action, environmental sustainability, and community resilience across Africa.">
+    <title>Africa Centre for Climate Change and Environmental Sustainability</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Hello Goodwall</h1>
-        <p>I'm Sylivia Opieba from Kenya</p>
-        <p>I am with Africa Centre for Climate Change and Environmental Sustainability</p>
-    </div>
+    <header>
+        <nav class="navbar wrap" aria-label="Main navigation">
+            <a class="brand" href="#top" aria-label="ACCES home">
+                <span class="brand-mark" aria-hidden="true">A</span>
+                <span>ACCES</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="navMenu">
+                <a href="#mission">Mission</a>
+                <a href="#work">Our Work</a>
+                <a href="#impact">Impact</a>
+                <a href="#contact">Contact</a>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+                    <span aria-hidden="true">🌙</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="top">
+            <div class="wrap hero-layout">
+                <div>
+                    <p class="eyebrow">Climate action for Africa</p>
+                    <h1>Africa Centre for Climate Change and Environmental Sustainability</h1>
+                    <p class="lead">Driving sustainable solutions, climate resilience, and environmental stewardship across Africa.</p>
+                    <div class="cta">
+                        <a href="#mission" class="btn">Learn More</a>
+                        <a href="#contact" class="btn btn-secondary">Get Involved</a>
+                    </div>
+                </div>
+
+                <div class="hero-panel" aria-label="Impact summary">
+                    <div class="impact-number">15+</div>
+                    <p>Years of environmental impact</p>
+                    <div class="progress-bar" aria-hidden="true"><span></span></div>
+                    <small>Supporting communities and ecosystems</small>
+                </div>
+            </div>
+        </section>
+
+        <section id="mission" class="section">
+            <div class="wrap">
+                <div class="section-header">
+                    <p class="eyebrow">Our Mission</p>
+                    <h2>Building a resilient, sustainable Africa</h2>
+                </div>
+
+                <p class="intro-text">We advance climate knowledge, environmental protection, and inclusive sustainability through research, partnerships, advocacy, and community engagement.</p>
+
+                <div class="card-grid">
+                    <article class="info-card">
+                        <h3>Climate Research</h3>
+                        <p>Investigating climate impacts and developing adaptation strategies tailored to African conditions.</p>
+                    </article>
+                    <article class="info-card">
+                        <h3>Sustainable Development</h3>
+                        <p>Promoting responsible resource use across agriculture, energy, water, and biodiversity systems.</p>
+                    </article>
+                    <article class="info-card">
+                        <h3>Community Action</h3>
+                        <p>Empowering local communities to respond to climate risks and improve long-term resilience.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="section section-alt">
+            <div class="wrap">
+                <div class="section-header">
+                    <p class="eyebrow">Our Work</p>
+                    <h2>Turning knowledge into action</h2>
+                </div>
+
+                <div class="two-col">
+                    <div>
+                        <h3>Research & Innovation</h3>
+                        <ul class="check-list">
+                            <li>Climate and environmental modeling</li>
+                            <li>Renewable energy planning</li>
+                            <li>Water resource protection</li>
+                            <li>Biodiversity conservation initiatives</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Capacity Building</h3>
+                        <ul class="check-list">
+                            <li>Community training and awareness</li>
+                            <li>Policy and advocacy support</li>
+                            <li>Cross-border partnerships</li>
+                            <li>Youth and leadership development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="section">
+            <div class="wrap">
+                <div class="section-header">
+                    <p class="eyebrow">Impact</p>
+                    <h2>Progress across Africa</h2>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <strong>50K+</strong>
+                        <span>People reached</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong>25+</strong>
+                        <span>Research projects</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong>12</strong>
+                        <span>African countries</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong>100+</strong>
+                        <span>Partners and collaborators</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-alt">
+            <div class="wrap">
+                <div class="section-header">
+                    <p class="eyebrow">Get in touch</p>
+                    <h2>Partner with us</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Contact information</h3>
+                        <p><strong>Email:</strong> <a href="mailto:info@acces.org">info@acces.org</a></p>
+                        <p><strong>Phone:</strong> +254 (0) 20 123 4567</p>
+                        <p><strong>Location:</strong> Nairobi, Kenya</p>
+
+                        <h3 class="follow-title">Follow us</h3>
+                        <ul class="tag-list" aria-label="Social media links">
+                            <li><a href="#" aria-label="Twitter">Twitter</a></li>
+                            <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+                            <li><a href="#" aria-label="Facebook">Facebook</a></li>
+                            <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                        </ul>
+                    </div>
+
+                    <form id="contactForm" novalidate>
+                        <div class="field-group">
+                            <label for="name">Full Name</label>
+                            <input id="name" name="name" type="text" placeholder="Your full name" required>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="email">Email Address</label>
+                            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us how we can collaborate..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn">Send Message</button>
+                        <p id="formStatus" class="form-status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap footer-inner">
+            <p>&copy; 2024 Africa Centre for Climate Change and Environmental Sustainability</p>
+            <p>Committed to a sustainable future for all Africans.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
