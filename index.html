@@ -9,6 +9,99 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .vision-2030 {
+            background: linear-gradient(135deg, rgba(76, 154, 42, 0.08) 0%, rgba(31, 127, 196, 0.08) 100%);
+            border-radius: 1.6rem;
+            padding: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .vision-card {
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: 1.2rem;
+            padding: 1.8rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vision-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--leaf);
+        }
+
+        .vision-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--leaf), var(--sky), var(--sun));
+        }
+
+        .vision-card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+            display: inline-block;
+        }
+
+        .vision-card h3 {
+            font-size: 1.5rem;
+            margin: 0.8rem 0;
+            color: var(--deep);
+        }
+
+        .vision-card .number {
+            display: block;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--leaf);
+            font-family: "Bricolage Grotesque", sans-serif;
+            margin-bottom: 0.5rem;
+        }
+
+        .vision-card p {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin: 0.8rem 0 0;
+        }
+
+        .progress-ring {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: conic-gradient(var(--leaf) 0deg 288deg, var(--border) 288deg 360deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--leaf);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 760px) {
+            .vision-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vision-2030 {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -135,41 +228,54 @@
                     </div>
                 </div>
 
-                <div class="section-header" style="margin-top:3rem;">
-                    <p class="eyebrow">Our bold vision for 2030</p>
-                    <h3>Scaling impact across Africa</h3>
-                </div>
+                <div class="vision-2030">
+                    <div class="section-header" style="margin-bottom: 0;">
+                        <p class="eyebrow" style="margin-bottom: 0.5rem;">Our bold vision for 2030</p>
+                        <h3 style="margin: 0; color: var(--deep);">Scaling impact across Africa</h3>
+                    </div>
 
-                <div class="stats-grid">
-                    <div class="stat-box">
-                        <strong>3,000+</strong>
-                        <span>Young climate leaders</span>
-                        <p style="font-size: 0.9rem; color: var(--muted); margin-top: 0.5rem;">Connected via EcoSoma app for real-time climate literacy</p>
-                    </div>
-                    <div class="stat-box">
-                        <strong>10,000+</strong>
-                        <span>Climate champions</span>
-                        <p style="font-size: 0.9rem; color: var(--muted); margin-top: 0.5rem;">Individuals & groups empowered to take climate action</p>
-                    </div>
-                    <div class="stat-box">
-                        <strong>1,000+</strong>
-                        <span>Volunteer leaders</span>
-                        <p style="font-size: 0.9rem; color: var(--muted); margin-top: 0.5rem;">Transforming communities into climate champions</p>
-                    </div>
-                    <div class="stat-box">
-                        <strong>60,000</strong>
-                        <span>Trees & seedlings</span>
-                        <p style="font-size: 0.9rem; color: var(--muted); margin-top: 0.5rem;">Restoring Africa's green spaces for future generations</p>
-                    </div>
-                    <div class="stat-box">
-                        <strong>50</strong>
-                        <span>Transformed schools</span>
-                        <p style="font-size: 0.9rem; color: var(--muted); margin-top: 0.5rem;">Degraded lands turned into thriving learning sanctuaries</p>
-                    </div>
-                    <div class="stat-box">
-                        <strong>50+</strong>
-                        <span>Strategic partners</span>
-                        <p style="font-size: 0.9rem; color: var(--muted); margin-top: 0.5rem;">NGOs, governments & institutions united for change</p>
+                    <div class="vision-grid">
+                        <div class="vision-card">
+                            <div class="vision-card-icon">🌍</div>
+                            <span class="number">3,000+</span>
+                            <h3>Young climate leaders</h3>
+                            <p>Connected via EcoSoma app for real-time climate literacy and actionable impact</p>
+                        </div>
+
+                        <div class="vision-card">
+                            <div class="vision-card-icon">💚</div>
+                            <span class="number">10,000+</span>
+                            <h3>Climate champions</h3>
+                            <p>Individuals & groups empowered to take decisive climate action in their communities</p>
+                        </div>
+
+                        <div class="vision-card">
+                            <div class="vision-card-icon">🙌</div>
+                            <span class="number">1,000+</span>
+                            <h3>Volunteer leaders</h3>
+                            <p>Transforming communities into climate champions and sustainability advocates</p>
+                        </div>
+
+                        <div class="vision-card">
+                            <div class="vision-card-icon">🌱</div>
+                            <span class="number">60,000</span>
+                            <h3>Trees & seedlings</h3>
+                            <p>Restoring Africa's green spaces for future generations and ecosystem health</p>
+                        </div>
+
+                        <div class="vision-card">
+                            <div class="vision-card-icon">🏫</div>
+                            <span class="number">50</span>
+                            <h3>Transformed schools</h3>
+                            <p>Degraded lands turned into thriving learning sanctuaries and community hubs</p>
+                        </div>
+
+                        <div class="vision-card">
+                            <div class="vision-card-icon">🤝</div>
+                            <span class="number">50+</span>
+                            <h3>Strategic partners</h3>
+                            <p>NGOs, governments & institutions united for systemic environmental change</p>
+                        </div>
                     </div>
                 </div>
             </div>
